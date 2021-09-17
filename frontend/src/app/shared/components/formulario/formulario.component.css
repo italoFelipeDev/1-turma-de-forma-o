@@ -1,0 +1,26 @@
+
+.formulario-usuario .input, p-dropdown, label{
+    margin-left: 30px;
+    width: 400px;
+}
+.formulario-usuario .asterisco{
+    color: red;
+}
+
+.formulario-usuario .botao_cadastrar{
+    display: flex;
+    align-items: center;
+    background: #212121;
+    border-color: #212121;
+    color: white;
+    border-radius: 20px;
+}
+
+.formulario-usuario{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+}

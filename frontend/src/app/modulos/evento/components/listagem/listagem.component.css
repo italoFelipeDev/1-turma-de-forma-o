@@ -1,0 +1,32 @@
+tr{
+    text-align: center;
+}
+.listagem-eventos #botao-info{
+    background-color: #212121;
+    border-color: #212121;
+}
+
+.listagem-eventos #button-criar, #botao-inscrever{
+    display: flex;
+    align-items: center;
+    background: #212121;
+    border-color: #212121;
+}
+
+.listagem-eventos #acoes, #vagas, #valor{
+    width: 70px;
+}
+
+.listagem-eventos #data-inicio, #data-fim{
+    width: 140px;
+}
+
+.mydialog {
+    width: 50vw;
+}
+
+@media screen and (max-width: 40em) {
+    .mydialog {
+        width: 75vw;
+    }
+}

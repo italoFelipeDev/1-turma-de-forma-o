@@ -1,0 +1,28 @@
+
+.cadastro-eventos .input, p-dropdown, .tipo-insc{
+    margin-left: 2%;
+    margin-bottom: 1.5%;
+    width: 400px;
+}
+.cadastro-eventos p{
+    color: black;
+}
+
+.cadastro-eventos .botao, .p-button-warning{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    background: #212121;
+    border-color: #212121;
+}
+
+.cadastro-eventos #float-input{
+    vertical-align: inherit;
+}
+.cadastro-eventos .label{
+    margin-left: 20px;
+}
+.cadastro-eventos input{
+    height: 30px;
+    border-radius: 5px;
+}

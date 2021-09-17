@@ -1,0 +1,41 @@
+<block-ui >
+    <div class="layout-wrapper"
+    [ngClass]="{ 'layout-compact': layoutCompact }"
+    (click)="onLayoutClick()">
+    <div #layoutContainer
+        class="layout-container"
+        [ngClass]="{
+            
+            'menu-layout-static': !menuService.isOverlay() && usuarioLogado ,
+            'menu-layout-overlay': menuService.isOverlay() && usuarioLogado,
+            'layout-menu-overlay-active': menuService.overlayMenuActive,
+            'menu-layout-horizontal': menuService.isHorizontal(),
+            'menu-layout-slim': menuService.isSlim(),
+            'layout-menu-static-inactive': menuService.staticMenuDesktopInactive,
+            'layout-menu-static-active': menuService.staticMenuMobileActive
+        }">
+        <app-topbar></app-topbar>
+
+        <div class="layout-menu" [ngClass]="{ 'layout-menu-dark': darkMenu }" (click)="onMenuClick($event)" *ngIf="usuarioLogado">
+            <p-scrollPanel #scrollPanel [style]="{ height: '100%' }" >
+                <app-menu ></app-menu>
+            </p-scrollPanel>
+        </div>
+
+        <div class="layout-main">
+            <div class="layout-content">
+                <div *ngIf="usuarioLogado ">
+                    <router-outlet [user]= "usuarioLogado"></router-outlet>
+                </div>
+                
+                <div *ngIf="!usuarioLogado">
+                    <app-login (emitUsuario) = "logarUsuario($event)"></app-login>
+                    
+                </div>
+            </div>
+        </div>
+        <basis-page-notification></basis-page-notification>
+        <div class="layout-mask"></div>
+    </div>
+</div>
+</block-ui>

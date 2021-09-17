@@ -1,0 +1,82 @@
+
+.tabela{
+    border: 1px solid;
+    margin: auto;
+    margin-block-end: 25px;
+}
+.listagem-usuario-admin #nascimento{
+    width: 120px;
+    text-align: center;
+}
+.listagem-usuario-admin #cpf{
+    width: 130px;
+    text-align: center;
+}
+.listagem-usuario-admin #telefone{
+    width: 130px;
+}
+.botao_apagar{
+    border-radius: 5px;
+}
+
+
+/*PERFIL*/
+
+
+#perfil{
+    align-items: center;
+    
+}
+#card{
+    width: 300px;
+    height: 400px;
+    align-self: center;
+    width: 100%;
+}
+
+#img-avatar{
+    margin-top: 20px;
+    width: 65px;
+    height: 65px;
+}
+:host ::ng-deep p-card{
+    text-align: center;
+    height: 400px;
+}
+
+.informacoes{
+    margin-top: 35px;
+}
+
+.paragrafo{
+    margin-top: 10px;
+    font-size: 16px;
+
+}
+.botoes{
+    margin-top: 30px;
+}
+
+button{
+    background: #212121;
+    border-color: #212121;
+}
+
+
+#botao-cadastro{
+    margin-top: 13px;
+    font-size: 13px;
+    margin-left: 79px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#round{
+    margin-right: 10px;
+}
+
+
+
+

@@ -1,0 +1,14 @@
+.informacao-evento .table{
+    width: 500px;
+}
+.informacao-evento .botao-inscricao{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background: #212121;
+}
+
+.informacao-evento button{
+    background: #212121;
+    border-color: #212121;
+}

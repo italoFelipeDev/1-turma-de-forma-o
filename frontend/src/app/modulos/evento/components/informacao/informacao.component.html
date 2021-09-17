@@ -1,0 +1,34 @@
+<app-card [titulo]="evento.titulo"  class="informacao-evento">
+   <table class="table">
+    <tbody>
+      <tr>
+      <p-accordion>
+        <p-accordionTab header="Descrição do evento">
+          {{ evento.descricao }}
+        </p-accordionTab>
+        <p-accordionTab header="Local do evento">
+          {{ evento.local }}
+        </p-accordionTab>
+        <p-accordionTab header="Tipo do evento">
+          {{ tipoEvento }}   
+        </p-accordionTab>
+        <p-accordionTab header="perguntas">
+          <p *ngFor="let perguntas of perguntas">{{perguntas.titulo}} -- {{perguntas.obrigatorio ? 'Obrigatória' : 'Não obrigatória'}}</p>   
+        </p-accordionTab>
+    </p-accordion>
+  </tr>
+      
+    </tbody>
+  </table>
+    <div class="p-d-flex p-jc-left ">
+      <button class="botao-inscricao" pButton type="button"  label="Inscrições" [routerLink]="['/inscricao/listagem' , evento.id ]"></button>
+    </div>
+  <div class="p-d-flex p-jc-end">
+    <button  pButton type="button" icon="pi pi-pencil" [routerLink]="['/eventos/formulario' , evento.id ]"></button>
+    <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+    <button  pButton type="button"  icon="pi pi-trash" (click)="confirm(evento.id)"></button>
+  </div>
+
+
+ 
+</app-card>
